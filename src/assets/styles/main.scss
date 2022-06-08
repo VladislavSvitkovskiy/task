@@ -3,3 +3,16 @@
 @import 'core';
 @import 'fonts';
 @import 'mixins';
+
+//components
+@import '../../components/Header';
+@import '../../components/Layout';
+@import '../../components/Loader';
+@import '../../components/Section';
+@import '../../components/users/UsersItem';
+@import '../../components/users/UsersList';
+
+
+//pages
+@import '../../pages/User';
+@import '../../pages/Users';

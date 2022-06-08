@@ -1,13 +1,14 @@
-.Doctors {
+.Users{
   &__section {
     position: relative;
-    left: -100%;
+    top: -100%;
+    width: auto;
     opacity: 0;
     transition: $transition;
 
     &.loaded {
       opacity: 1;
-      left: 0;
+      top: 0;
     }
   }
 }

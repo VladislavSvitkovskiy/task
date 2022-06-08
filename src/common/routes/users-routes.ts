@@ -10,7 +10,7 @@ export default {
     Component: pages.UsersPage
   },
   user: {
-    path: '/users/:userName',
+    path: '/:userName',
     label: 'User',
     exact: true,
     Component: pages.UserPage

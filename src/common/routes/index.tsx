@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Redirect } from 'react-router-dom';
 
 import Layout from 'components/Layout';
 import { useAppDispatch } from 'hooks';
@@ -17,6 +17,7 @@ const Routes = () =>  {
         {Object.values(routes).map((route, i) => {
           return <PublicRoute key={i} {...route} {...props} />;
         })}
+        <Redirect to={routes.users.path} />
       </Switch>
     </Layout>
   );

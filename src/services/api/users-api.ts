@@ -1,20 +1,23 @@
 import axios from 'axios';
 import {
-  UserQueriesParamsInstance,
-  UsersListQueriesParamsInstance,
-  UserInstance
+  UsersParamsInstance,
+  UserInstance,
+  UserParamsInstance
 } from 'models';
 
 export default {
-  getUsersList: (url: string, params: UsersListQueriesParamsInstance, callback?: (r: {data: UserInstance[]}) => void) =>
+  getUsersList: ({url, params, callback}: UsersParamsInstance) =>
     axios
       .get<UserInstance[]>(url, {
-        params: params
+        params
       })
       .then(r => callback && callback(r)),
 
-  getUser: (url: string, callback?: (r: {data: UserInstance}) => void) =>
+  getUser: ({url, callback}: UserParamsInstance) =>
     axios
       .get<UserInstance>(url)
       .then(r => callback && callback(r))
+      .catch(error => {
+        console.log(error);
+      })
 };

@@ -1,15 +1,22 @@
 export interface UserInstance {
   id: number
   avatar_url: string
-  html_url: string
+  login: string
   name: string
-  email:string
+  email: string
 }
 
-export interface UsersListQueriesParamsInstance {
+export interface UsersParamsInstance {
+  url: string
+  params: UsersQueriesParamsInstance
+  callback?: (r: {data: UserInstance[]}) => void
+}
+
+export interface UsersQueriesParamsInstance {
   per_page: number
 }
 
-export interface UserQueriesParamsInstance {
-  userName: string
+export interface UserParamsInstance {
+  url: string
+  callback?: (r: {data: UserInstance}) => void
 }

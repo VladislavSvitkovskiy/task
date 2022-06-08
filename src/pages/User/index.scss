@@ -1,13 +1,13 @@
-.Doctor {
+.User {
   &__section {
     position: relative;
-    left: -100%;
+    top: -100%;
     padding: 32px;
     opacity: 0;
     transition: $transition;
     &.loaded {
       opacity: 1;
-      left: 0;
+      top: 0;
     }
   }
 
@@ -26,43 +26,22 @@
   &__avatar {
     width: 200px;
     margin-right: 32px;
+    border-radius: $borderRadius;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
+    text-align: right;
     h3 {
-      font-size: 40px;
-      line-height: 52px;
+      font-size: 30px;
+      line-height: 40px;
       margin-bottom: 8px;
     }
-    span {
-      svg {
-        margin-right: 2px;
-      }
+    p {
       color: $darkColor60;
-    }
-  }
-
-  &__button {
-    margin-top: auto;
-    margin-bottom: 0px;
-  }
-
-  &__links-item {
-    display: flex;
-    align-items: center;
-    padding: 12px 12px 12px 0;
-    font-size: 20px;
-    line-height: 24px;
-
-    svg {
-      margin-right: 21px;
-    }
-    span {
-      margin-left: auto;
-      margin-right: 0;
-      color: $darkColor60;
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 }

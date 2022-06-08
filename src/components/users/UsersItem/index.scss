@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 670px;
 
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -14,29 +13,14 @@
   }
 
   &__avatar {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     margin-right: 12px;
     overflow: hidden;
+    border-radius: $borderRadius;
 
     img {
       width: 100%;
-    }
-  }
-}
-
-.doctor-item {
-  &__name,
-  &__availability {
-    font-weight: 400;
-  }
-
-  &__info {
-    font-size: 12px;
-    line-height: 16px;
-    span:first-child {
-      margin-right: 16px;
-      color: $darkColor60;
     }
   }
 }

@@ -1,21 +1,17 @@
 .Users-list {
   width: auto;
   height: calc(100vh - $headerHeight);
-  overflow: hidden;
-  ul {
-    width: auto;
-    height: 100%;
-    padding: 32px;
-    overflow: auto;
-    &::-webkit-scrollbar{
-      width: 8px;
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: $scrollColor60;
-      border-radius: $borderRadius;
-    }
-    &::-webkit-scrollbar-thumb:hover{
-      background-color: $scrollColor;
-    }
+  padding: 32px;
+  overflow: auto;
+  &::-webkit-scrollbar{
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollColor60;
+    border-radius: $borderRadius;
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background-color: $scrollColor;
   }
 }
+

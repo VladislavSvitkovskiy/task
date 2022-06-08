@@ -1,25 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface UsersItemProps {
   avatar_url: string
-  name: string
-  email: string
+  login: string
 }
 
-export default ({ avatar_url, name, email }: UsersItemProps) => {
+export default ({ avatar_url, login }: UsersItemProps) => {
   const base = 'User-item';
 
   return (
     <li className={`${base}`}>
-      <div className={` ${base}__container`}>
-        <div className={`${base}__avatar`}>
-          <img src={avatar_url} alt='Avatar' />
+      <Link to={`/${login}`} >
+        <div className={` ${base}__container`}>
+          <div className={`${base}__avatar`}>
+            <img src={avatar_url} alt='Avatar' />
+          </div>
         </div>
-        <div className={`${base}__desc`}>
-          <p className={`${base}__name`}>{name}</p>
-          <p className={`${base}__email`}>{email}</p>
-        </div>
-      </div>
+      </Link>
     </li>
   );
 };
