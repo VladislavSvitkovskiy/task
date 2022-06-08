@@ -1,0 +1,68 @@
+.Doctor {
+  &__section {
+    position: relative;
+    left: -100%;
+    padding: 32px;
+    opacity: 0;
+    transition: $transition;
+    &.loaded {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  &__block {
+    display: flex;
+    margin-bottom: 16px;
+  }
+
+  &__avatar {
+    width: 200px;
+    margin-right: 32px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-size: 40px;
+      line-height: 52px;
+      margin-bottom: 8px;
+    }
+    span {
+      svg {
+        margin-right: 2px;
+      }
+      color: $darkColor60;
+    }
+  }
+
+  &__button {
+    margin-top: auto;
+    margin-bottom: 0px;
+  }
+
+  &__links-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 12px 0;
+    font-size: 20px;
+    line-height: 24px;
+
+    svg {
+      margin-right: 21px;
+    }
+    span {
+      margin-left: auto;
+      margin-right: 0;
+      color: $darkColor60;
+    }
+  }
+}

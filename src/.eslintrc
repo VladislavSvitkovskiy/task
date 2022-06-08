@@ -1,0 +1,72 @@
+{
+"extends": [
+  "prettier",
+  "standart"
+],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "plugins": [
+    "import",
+    "prettier"
+  ],
+  "rules": {
+    "quotes": ["error", "single"],
+    "@typescript-eslint/camelcase": "off",
+    "camelcase": "off",
+    "semi": [2, "always"],
+    "linebreak-style": 0,
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "comma-dangle": ["error", "never"],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "internal",
+            "index",
+            "sibling",
+            "parent"
+          ]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react*",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "@/",
+            "group": "internal"
+          },
+          {
+            "pattern": "types/",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react*"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  },
+  "settings": {
+    "import/internal-regex": "^@"
+  }
+}

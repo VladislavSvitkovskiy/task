@@ -1,0 +1,14 @@
+.Doctors {
+  &__section {
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    transition: $transition;
+
+    &.loaded {
+      opacity: 1;
+      left: 0;
+    }
+  }
+}
+

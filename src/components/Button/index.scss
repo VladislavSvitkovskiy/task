@@ -1,0 +1,44 @@
+.Button {
+  padding: 10px 24px;
+  outline: none;
+  border-radius: $borderRadius;
+  cursor: pointer;
+  transition: $transition;
+}
+
+.Button__secondary {
+  background-color: #ffffff;
+  border: 1px solid $primaryColor;
+  color: $primaryColor;
+
+  &.Button__disable {
+    opacity: 0.3;
+    border-color: $secondaryColor;
+    color: $secondaryColor;
+    cursor: auto;
+    &:hover,
+    &:focus {
+      border-color: $secondaryColor;
+      background-color: #ffffff;
+      color: $darkColor;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $primaryColor;
+    background-color: $primaryColor;
+    color: white;
+  }
+}
+
+.Button__primary {
+  background-color: $primaryColor;
+  border: none;
+  color: white;
+  &.Button__disable {
+    opacity: 0.3;
+    background-color: $secondaryColor;
+    cursor: auto;
+  }
+}

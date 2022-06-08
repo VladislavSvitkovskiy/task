@@ -1,0 +1,22 @@
+.Loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: $longTransition;
+  opacity: 0;
+  background-color: #ffffff;
+  &.active {
+    opacity: 1;
+  }
+}
+
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: auto;
+  height: auto;
+}

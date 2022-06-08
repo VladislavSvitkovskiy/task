@@ -1,0 +1,48 @@
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0000);
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background-color: $mainBackgroundColor;
+  height: 100vh;
+  overflow: hidden;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $LineHeight;
+  font-weight: $fontWeight;
+}
+
+section {
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
